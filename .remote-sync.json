@@ -1,0 +1,18 @@
+{
+  "transport": "ftp",
+  "hostname": "ftp.robertmozeika.com",
+  "port": "21",
+  "username": "robertm",
+  "password": "Mage4life",
+  "target": "/public_html",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "watch": [
+    "/js/dist/bundle.js"
+  ],
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false
+}
