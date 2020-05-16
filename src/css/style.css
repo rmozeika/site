@@ -1400,7 +1400,7 @@ object {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	background-image: url(../images/loading.gif);
+	background-image: url(/images/loading.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: -100px 0 0 -100px;
@@ -2249,7 +2249,7 @@ width: -webkit-calc(100% / 4);
 	display: none;
 }
 #loader .loader-icon {
-	background: url(../images/loading.gif) no-repeat center center;
+	background: url(/images/loading.gif) no-repeat center center;
 	background-color: #FFF;
 	margin: -22px -22px;
 	top: 50%;

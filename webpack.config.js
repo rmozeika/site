@@ -15,7 +15,8 @@ module.exports = {
     devtool: 'source-map',
     output: {
         path: distDir,
-        filename: PROD ? 'bundle.min.js' : 'bundle.js'
+        // filename: PROD ? 'bundle.min.js' : 'bundle.js'
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -59,7 +60,10 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+			template: __dirname + '/index.html',
+			filename: 'index.html'
+		})
     ],
     // PROD ? [
     //     new webpack.optimize.UglifyJsPlugin({
@@ -75,9 +79,17 @@ module.exports = {
     //         jQuery: "jquery"
     //     })
     // ],
-    externals: {
-        // require("jquery") is external and available
-        //  on the global var jQuery
-        "jquery": "jQuery"
-      }
+    // externals: {
+    //     // require("jquery") is external and available
+    //     //  on the global var jQuery
+    //     "jquery": "jQuery"
+    // },
+    optimization: {
+        minimize: false
+    },
+    devServer: {
+		// contentBase: path.join(__dirname, 'dist.web'),
+		port: 3000,
+		// writeToDisk: true
+	},
 };
